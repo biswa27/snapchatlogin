@@ -1,11 +1,12 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/app.py", "use": "@vercel/python" },
-    { "src": "public/**/*", "use": "@vercel/static" }
+    { "src": "api/app.py", "use": "@vercel/python" },  // Ensure this points to your Python file
+    { "src": "public/**/*", "use": "@vercel/static" }   // Static assets (HTML, CSS, JS)
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/app.py" },
-    { "src": "/(.*)", "dest": "/public/$1" }
+    { "src": "/api/(.*)", "dest": "/api/app.py" }, // Route API calls to your Python file
+    { "src": "/(.*)", "dest": "/public/$1" } // Serve the static frontend
   ]
 }
+
