@@ -8,7 +8,7 @@ SUPABASE_URL = "https://yvifnznvwxwcwapfgvwu.supabase.co"
 SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl2aWZuem52d3h3Y3dhcGZndnd1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDUyMzY0NzksImV4cCI6MjA2MDgxMjQ3OX0.60_RfkcsMtVruhowvNXpgCy4UhTkjGlrllti8dfZPD0"
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-@app.route("/app", methods=["POST"])
+@app.route("/api/app", methods=["POST"])
 def login():
     data = request.json
     username = data.get("username")
